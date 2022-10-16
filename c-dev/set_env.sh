@@ -1,9 +1,13 @@
 apt update 
-apt install -y make git wget lbzip2 unzip vim curl zsh python3-pip automake autoconf pkg-config ncurses-dev netcat net-tools silversearcher-ag
+apt install -y make git wget lbzip2 unzip vim curl zsh python3-pip automake autoconf pkg-config ncurses-dev netcat net-tools silversearcher-ag locales
 rm -rf /var/lib/apt/lists/* 
 pip3 install --upgrade pip 
 pip3 install nrfutil 
 pip3 install payments
+
+# 多语言支持
+locale-gen zh_CN
+locale-gen zh_CN.utf8
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
@@ -11,6 +15,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
+
+
+git config --global user.email 'shiqi614@gmail.com'
+git config --global user.name 'shiqi_614'
 
 # ctags
 git clone https://github.com/universal-ctags/ctags.git 
@@ -30,11 +38,3 @@ make
 make install 
 cd .. 
 
-
-# Clean
-rm -r global-6.6.8 
-rm global-6.6.8.tar.gz 
-rm -r ctags 
-
-git config --global user.email 'shiqi614@gmail.com'
-git config --global user.name 'shiqi_614'
