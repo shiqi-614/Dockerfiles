@@ -1,6 +1,6 @@
 # 配置zsh vim
-git clone https://github.com/shiqi-614/public-dotfile.git 
 rm ~/.zshrc 
+git clone https://github.com/shiqi-614/public-dotfile.git 
 ln -s /root/public-dotfile/.vimrc ~/.vimrc 
 ln -s /root/public-dotfile/.zshrc ~/.zshrc 
 vim +PlugInstall +qall 
