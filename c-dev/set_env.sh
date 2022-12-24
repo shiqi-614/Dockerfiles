@@ -20,6 +20,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git config --global user.email 'shiqi614@gmail.com'
 git config --global user.name 'shiqi_614'
 
+ssh-keygen -f /root/.ssh/id_rsa -q -N ""
+
 # ctags
 git clone https://github.com/universal-ctags/ctags.git 
 cd ctags 
