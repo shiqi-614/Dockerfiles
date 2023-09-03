@@ -4,6 +4,9 @@ rm -rf /var/lib/apt/lists/*
 pip3 install --upgrade pip 
 pip3 install nrfutil 
 pip3 install payments
+pip3 install pyelftools
+pip3 install ranger-fm
+
 
 # 多语言支持
 locale-gen zh_CN
@@ -40,3 +43,7 @@ make
 make install 
 cd .. 
 
+rm -rf ~/ctags
+rm -rf global-6.6.8
+rm global-6.6.8.tar.gz
+rm set_env.sh

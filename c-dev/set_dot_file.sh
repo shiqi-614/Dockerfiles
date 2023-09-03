@@ -3,6 +3,7 @@ rm ~/.zshrc
 git clone https://github.com/shiqi-614/public-dotfile
 ln -s /root/public-dotfile/.vimrc ~/.vimrc 
 ln -s /root/public-dotfile/.zshrc ~/.zshrc 
+ln -s /root/public-dotfile/ranger ~/.config/ranger
 vim +PlugInstall +qall 
 echo 'colorscheme molokai' >> ~/.vimrc 
 
